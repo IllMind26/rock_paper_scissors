@@ -3,7 +3,7 @@
 // create function for the computer to make a random selection from that array
     function getComputerChoice() {
     
-        const game = ["Rock", "Paper", "Scissors"];
+        const select = ["Rock", "Paper", "Scissors"];
     }
 
    
@@ -18,6 +18,10 @@
 
     const playerSelection = "rock";
     const computerSelection = getComputerChoice();
+
+    for (let i =0; i < 5; i++); {
+
+    }
 
 // Rock beats scissors
 
