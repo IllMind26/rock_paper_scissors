@@ -3,10 +3,11 @@
 // create function for the computer to make a random selection from that array
     function getComputerChoice() {
     
-        const select = ["rock", "paper", "scissors"];
+        let select = ["rock", "paper", "scissors"];
     }
 
-    randomSelect = Math.floor(math.random()*select.length);
+    let randomSelect = select[Math.floor(Math.random() * select.length)];
+   
    
 // create a prompt for the user to make a selection
 
