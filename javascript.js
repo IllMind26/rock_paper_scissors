@@ -25,7 +25,7 @@ const computerSelection = ["rock", "paper", "scissors"];
     }
 
     const playerSelection = "rock";
-    const computerSelection = getComputerChoice();
+
 
     for (let i =0; i < 5; i++); {
 
