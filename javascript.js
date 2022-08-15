@@ -1,18 +1,20 @@
 // create an array that contains rock, paper, scissors
 
-const computerSelection = ["rock", "paper", "scissors"];
+const rps = ["rock", "paper", "scissors"];
+
 
 // create function that generates a random word(Rock, Paper, Scissors) from an array
 
 // create function for the computer to make a random selection from that array
-    function getComputerChoice(text) {
-        const randomSelect = text[Math.floor(Math.random() * text.length)];
-        console.log(randomSelect);
+    function getComputerChoice() {
+        const randomSelect = rps[Math.floor(Math.random() * rps.length)];
+        return randomSelect;
+        
     }
 
-    getComputerChoice(computerSelection);
+    getComputerChoice();
 
-
+    
    
    
 // create a prompt for the user to make a selection
@@ -21,18 +23,22 @@ const computerSelection = ["rock", "paper", "scissors"];
 
 // within that round function
     function playRound(playerSelection, computerSelection) {
-        // code here
-    }
-
-    const playerSelection = "rock";
-
-
-    for (let i =0; i < 5; i++); {
 
     }
+
+    const playerSelection = prompt("");
+    const computerSelection = getComputerChoice();
+
+    function game(){
+        playRound();
+    }
+
+    for (let i = 0; i < 5; i++); 
+   
 
 // Rock beats scissors
-
+    rock > scissors 
 // Scissors beats paper
-
+    scissors > paper
 // Paper beats rock
+    paper > rock
