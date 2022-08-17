@@ -9,7 +9,7 @@ const rps = ["rock", "paper", "scissors"];
     function getComputerChoice() {
         const randomSelect = rps[Math.floor(Math.random() * rps.length)];
         console.log(randomSelect);
-        alert(randomSelect);
+        return randomSelect;
     }
 
     
@@ -17,19 +17,20 @@ const rps = ["rock", "paper", "scissors"];
    
 // create a prompt for the user to make a selection
 
-// create a function that creates a round, make these rounds repeat 5 times
+// create a function that creates a round
 
-// within that round function
     function playRound(playerSelection, computerSelection) {
 
     }
 
-    const playerSelection = prompt("Select rock, paper, or scissors!");
     const computerSelection = getComputerChoice();
+    const playerSelection = prompt("Choose rock, paper, or scissors!!").toLowerCase();
+    console.log(playerSelection);
 // player and computer scores start at 0
 
     let playerScore = 0;
     let computerScore = 0;
+    const goal = 5;
 
 // loop the rounds 5 times
     function game() {
@@ -37,4 +38,3 @@ const rps = ["rock", "paper", "scissors"];
             playRound();
         }
     }
-   
