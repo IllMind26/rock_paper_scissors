@@ -12,29 +12,32 @@ const rps = ["rock", "paper", "scissors"];
         return randomSelect;
     }
 
+    const computerSelection = getComputerChoice();
+    const playerSelection = prompt("Choose rock, paper, or scissors!!").toLowerCase();
+    console.log(playerSelection);
     
    
    
 // create a prompt for the user to make a selection
 
 // create a function that creates a round
+    const roundVictory = "You win!!!"
+    const roundDefeat = "You lose!!"
 
     function playRound(playerSelection, computerSelection) {
-
+        
     }
 
-    const computerSelection = getComputerChoice();
-    const playerSelection = prompt("Choose rock, paper, or scissors!!").toLowerCase();
-    console.log(playerSelection);
 // player and computer scores start at 0
 
-    let playerScore = 0;
-    let computerScore = 0;
-    const goal = 5;
+
 
 // loop the rounds 5 times
+
     function game() {
-        for(let i = 0; i < 5; i++); {
-            playRound();
+        for(let i = 0; i < 5; i++) {
+            playRound((playerSelection, computerSelection));
+                
+
         }
     }
