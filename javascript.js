@@ -22,10 +22,29 @@ const rps = ["rock", "paper", "scissors"];
 
 // create a function that creates a round
     const roundVictory = "You win!!!"
+        console.log(roundVictory)
     const roundDefeat = "You lose!!"
+        console.log(roundDefeat)
+
 
     function playRound(playerSelection, computerSelection) {
-        
+        switch (playerSelection + computerSelection) {
+            case "rockscissors":
+            case "scissorspaper":
+            case "paperrock":
+                result = user1;
+                break;
+            case "scissorsrock":
+            case "paperscissors":
+            case "rockpaper":
+                result = user2;
+                break;
+            case "rockrock":
+            case "paperpaper":
+            case "scissorsscissors":
+                result = null;
+                break;
+        }
     }
 
 // player and computer scores start at 0
