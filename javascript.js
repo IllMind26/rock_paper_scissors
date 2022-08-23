@@ -9,7 +9,6 @@ const rps = ["rock", "paper", "scissors"];
     function getComputerChoice() {
         const randomSelect = rps[Math.floor(Math.random() * rps.length)];
         console.log(randomSelect);
-        return randomSelect;
     }
 
     const computerSelection = getComputerChoice();
@@ -17,37 +16,26 @@ const rps = ["rock", "paper", "scissors"];
     console.log(playerSelection);
     
    
-   
-// create a prompt for the user to make a selection
+// create function to keep score between player and computer
 
-// create a function that creates a round
-    const roundVictory = "You win!!!"
-        console.log(roundVictory)
-    const roundDefeat = "You lose!!"
-        console.log(roundDefeat)
-
+    let playerScore = 0;
+    let computerScore = 0;
+    
+// create a function to simulate a round
 
     function playRound(playerSelection, computerSelection) {
-        switch (playerSelection + computerSelection) {
-            case "rockscissors":
-            case "scissorspaper":
-            case "paperrock":
-                result = user1;
-                break;
-            case "scissorsrock":
-            case "paperscissors":
-            case "rockpaper":
-                result = user2;
-                break;
-            case "rockrock":
-            case "paperpaper":
-            case "scissorsscissors":
-                result = null;
-                break;
+        if (playerSelection === computerSelection) {
+            console.log("Tie game!!!");
+        } else if (playerSelection === "rock" && computerSelection === [rps] || 
+        playerSelection === "scissors" && computerSelection === [rps] || playerSelection === "paper" && computerSelection === "scissors"
+        || playerSelection === "rock" && computerSelection === "paper") {
+            console.log("You Win!!");
+            playerScore++;
+        } else {
+            console.log("You Lose!!");
+            computerScore++;
         }
     }
-
-// player and computer scores start at 0
 
 
 
@@ -55,7 +43,7 @@ const rps = ["rock", "paper", "scissors"];
 
     function game() {
         for(let i = 0; i < 5; i++) {
-            playRound((playerSelection, computerSelection));
+            playRound(playerSelection, computerSelection);
                 
 
         }
