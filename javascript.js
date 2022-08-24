@@ -3,8 +3,6 @@
 const rps = ["rock", "paper", "scissors"];
 
 
-// create function that generates a random word(Rock, Paper, Scissors) from an array
-
 // create function for the computer to make a random selection from that array
     function getComputerChoice() {
         const randomSelect = rps[Math.floor(Math.random() * rps.length)];
@@ -20,14 +18,14 @@ const rps = ["rock", "paper", "scissors"];
 
     let playerScore = 0;
     let computerScore = 0;
-    
+
 // create a function to simulate a round
 
     function playRound(playerSelection, computerSelection) {
         if (playerSelection === computerSelection) {
             console.log("Tie game!!!");
-        } else if (playerSelection === "rock" && computerSelection === [rps] || 
-        playerSelection === "scissors" && computerSelection === [rps] || playerSelection === "paper" && computerSelection === "scissors"
+        } else if (playerSelection === "rock" && computerSelection === "scissors" || 
+        playerSelection === "scissors" && computerSelection === "rock" || playerSelection === "paper" && computerSelection === "scissors"
         || playerSelection === "rock" && computerSelection === "paper") {
             console.log("You Win!!");
             playerScore++;
@@ -37,9 +35,7 @@ const rps = ["rock", "paper", "scissors"];
         }
     }
 
-
-
-// loop the rounds 5 times
+// create a function that loops the round 5 times
 
     function game() {
         for(let i = 0; i < 5; i++) {
