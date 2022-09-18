@@ -5,16 +5,20 @@ const rps = ["rock", "paper", "scissors"];
 
 // create function for the computer to make a random selection from that array
     function getComputerChoice() {
-        const randomSelect = rps[Math.floor(Math.random() * rps.length)];
+        let randomSelect = rps[Math.floor(Math.random() * rps.length)];
         console.log('The CPU has selected ' + randomSelect);
+        return randomSelect;
     }
+
 
     const computerSelection = getComputerChoice();
     const playerSelection = prompt("Choose rock, paper, or scissors!!").toLowerCase();
  
-
-    if (playerSelection === 'rock' || playerSelection === 'paper' || playerSelection === 'scissors') {
+// create code to display what the player has input in the console
+    if (playerSelection === 'rock' || playerSelection === "paper" || playerSelection === 'scissors') {
         console.log('You have selected ' + `${playerSelection}`);
+    } else {
+      console.log('Invalid input');
     }
     
    
@@ -23,30 +27,29 @@ const rps = ["rock", "paper", "scissors"];
     let playerScore = 0;
     let computerScore = 0;
 
-// create a function to simulate a round
+// create a function to simulate a round and determine a winner
 
-function playRound(playerSelection, computerSelection) {
-    if (`${playerSelection}` === `${computerSelection}`) {
-        return 'It\'s a tie!';
-    } else if (playerSelection === 'rock' && computerSelection === 'scissors') {
-      return 'You win!';
-    } else if (playerSelection === 'paper' && computerSelection === 'rock') {
-      return 'You win!';
-    } else if (playerSelection === 'scissors' && computerSelection === 'paper') {
-      return 'You win!';
-    } else  {
-      return 'You lose!';
+  const winner = playRound(playerSelection, computerSelection);
+
+  function playRound(playerSelection, computerSelection) {
+    let win = {
+      rock: "scissors",
+      scissors: "paper",
+      paper: "rock"
     }
 
-}
+    if (win[playerSelection] === computerSelection) {
+      console.log(`You Win!! ${playerSelection} beats ${computerSelection}`);
+    } else if (win[computerSelection] === playerSelection) {
+      console.log(`You Lose!! ${computerSelection} beats ${playerSelection}`);
+    } else  console.log('Tie game!!')
+  }
 
-console.log(playRound(playerSelection,computerSelection));
+  
+  
+
+
+
+
+// playRound(playerSelection, computerSelection);
 // create a function that loops the round 5 times
-
-    function game() {
-        for(let i = 0; i < 5; i++) {
-            playRound(playerSelection, computerSelection);
-                
-
-        }
-    }
