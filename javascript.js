@@ -41,26 +41,22 @@ const rps = ["rock", "paper", "scissors"];
     if (win[playerSelection] === computerSelection) {
       console.log(`You win!! ${playerSelection} beats ${computerSelection}`);
       playerScore++;
+      console.log(playerScore);
     } else if (win[computerSelection] === playerSelection) {
       console.log(`You lose!! ${computerSelection} beats ${playerSelection}`);
       computerScore++;
+      console.log(computerScore);
     } else  console.log('Tie game!!')
     return playerScore || computerScore;
   }
 
   // create a game function to loop rounds 5 times
-  
+
   function game() {
-    playRound();
     for (let i = 0; i < 5; i++) {
-      return playRound();
+      playRound(playerSelection, computerSelection);
     }
   }
   
   
 
-
-
-
-// playRound(playerSelection, computerSelection);
-// create a function that loops the round 5 times
