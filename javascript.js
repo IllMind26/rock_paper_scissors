@@ -1,25 +1,27 @@
-// create an array that contains rock, paper, scissors
-
-const rps = ["rock", "paper", "scissors"];
-
-// create function for the computer to make a random selection from that array
+// create function for the computer to make a random selection from an array
 
 function getComputerChoice() {
+  const rps = ["rock", "paper", "scissors"];
   let randomSelect = rps[Math.floor(Math.random() * rps.length)];
   console.log('The CPU has selected ' + randomSelect);
   return randomSelect;
 }
 
 const computerSelection = getComputerChoice();
-const playerSelection = prompt("Choose rock, paper, or scissors!!").toLowerCase();
 
-// create code to display what the player has input in the console
+// create a function for the player's selection
 
-if (playerSelection === 'rock' || playerSelection === "paper" || playerSelection === 'scissors') {
-  console.log('You have selected ' + `${playerSelection}`);
-} else {
-  console.log('Invalid input');
+function getPlayerChoice() {
+  const choice = prompt("Choose rock, paper, or scissors!!").toLowerCase();
+  if (choice === 'rock' || choice === "paper" || choice === 'scissors') {
+    console.log('You have selected ' + `${choice}`);
+  } else {
+    console.log('Invalid input');
+  }
+  return choice;
 }
+
+const playerSelection = getPlayerChoice();
 
 // create function to keep score between player and computer
 
@@ -53,11 +55,9 @@ function playRound(playerSelection, computerSelection) {
 
 function game() {
   for (i = 0; i <= 5; i++) {
-    const playerSelection = prompt("Choose rock, paper, or scissors!!").toLowerCase();
-    console.log('You have selected ' + `${playerSelection}`);
+    const playerSelection = getPlayerChoice();
     const computerSelection = getComputerChoice();
     playRound(playerSelection, computerSelection);
-
   }
 
 }
