@@ -53,12 +53,12 @@ function playRound(playerSelection, computerSelection) {
 
 // create a game function to loop rounds 5 times
 
-function game() {
-  for (i = 0; i <= 5; i++) {
-    const playerSelection = getPlayerChoice();
-    const computerSelection = getComputerChoice();
-    playRound(playerSelection, computerSelection);
-  }
-}
+// function game() {
+//   for (i = 0; i <= 5; i++) {
+//     const playerSelection = getPlayerChoice();
+//     const computerSelection = getComputerChoice();
+//     playRound(playerSelection, computerSelection);
+//   }
+// }
 
 game();
