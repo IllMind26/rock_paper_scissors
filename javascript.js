@@ -61,4 +61,8 @@ function playRound(playerSelection, computerSelection) {
 //   }
 // }
 
+<<<<<<< HEAD
 game();
+=======
+// game();
+>>>>>>> e73a27bf8490c47dfd9163bf1ee1d604267bba72
