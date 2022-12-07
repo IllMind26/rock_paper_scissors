@@ -1,27 +1,55 @@
-// create function for the computer to make a random selection from an array
+const rounds = document.querySelector('.rounds');
 
-function getComputerChoice() {
-  const rps = ["rock", "paper", "scissors"];
-  let randomSelect = rps[Math.floor(Math.random() * rps.length)];
-  console.log('The CPU has selected ' + randomSelect);
-  return randomSelect;
-}
+const score = document.querySelector('.score');
+const result = document.querySelector('.result');
+const WINS = [
+  {
+    name: 'rock',
+    beats: 'scissors'
+  },
+  {
+    name: 'scissors',
+    beats: 'paper'
+  },
+  {
+    name: 'paper',
+    beats: 'rock'
+  }
+]
 
-const computerSelection = getComputerChoice();
 
 // create a function for the player's selection
 
-function getPlayerChoice() {
-  const choice = prompt("Choose rock, paper, or scissors!!").toLowerCase();
-  if (choice === 'rock' || choice === "paper" || choice === 'scissors') {
-    console.log('You have selected ' + `${choice}`);
-  } else {
-    console.log('Invalid input');
-  }
-  return choice;
+const choices = document.querySelectorAll('[data-selection]');
+
+choices.forEach(choice => {
+  choice.addEventListener('click', e => {
+    const choiceName = choice.dataset.selection
+    const win = WINS.find(win => win.name === choiceName)
+    getPlayerChoice(win);
+  })
+})
+
+function getPlayerChoice(win) {
+  const computerSelection = getComputerChoice()
+  const youWin = winner(playerSelection, computerSelection);
+  const youLose = winner(computerSelection, playerSelection);
+  console.log(computerSelection);
+}
+
+// create function for the computer to make a random selection from an array
+
+function getComputerChoice() {
+  const randomSelect = Math.floor(Math.random() * WINS.length);
+  return WINS[randomSelect];
+}
+
+function winner(choice, computerSelection) {
+  return win.beats === computerSelection.name
 }
 
 const playerSelection = getPlayerChoice();
+const computerSelection = getComputerChoice();
 
 // create function to keep score between player and computer
 
@@ -30,39 +58,24 @@ let computerScore = 0;
 
 // create a function to simulate a round and determine a winner
 
-const winner = playRound(playerSelection, computerSelection);
+const winning = playRound(playerSelection, computerSelection);
 
 function playRound(playerSelection, computerSelection) {
-  let win = {
-    rock: "scissors",
-    scissors: "paper",
-    paper: "rock"
-  };
-
-  if (computerSelection === win[playerSelection]) {
-    console.log(`You win!! ${playerSelection} beats ${computerSelection}`);
+  if (computerSelection === WINS[playerSelection]) {
+    result.textContent = `You win!! ${playerSelection} beats ${computerSelection}`;
     playerScore++;
     console.log('You have ' + playerScore);
-  } else if (win[computerSelection] === playerSelection) {
-    console.log(`You lose!! ${computerSelection} beats ${playerSelection}`);
+  } else if (WINS[computerSelection] === playerSelection) {
+    result.textContent = `You lose!! ${computerSelection} beats ${playerSelection}`;
     computerScore++;
     console.log('The CPU has ' + computerScore);
-  } else console.log('Tie game!!')
+  } else result.textContent = 'Tie game!!';
 
 }
 
+
 // create a game function to loop rounds 5 times
 
-// function game() {
-//   for (i = 0; i <= 5; i++) {
-//     const playerSelection = getPlayerChoice();
-//     const computerSelection = getComputerChoice();
-//     playRound(playerSelection, computerSelection);
-//   }
-// }
 
-<<<<<<< HEAD
-game();
-=======
+
 // game();
->>>>>>> e73a27bf8490c47dfd9163bf1ee1d604267bba72
