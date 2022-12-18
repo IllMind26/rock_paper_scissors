@@ -4,6 +4,7 @@ const result = document.querySelector('#result');
 const winner = document.querySelector('#winner');
 const player = document.querySelector('.player');
 const computer = document.querySelector('.computer');
+const buttons = document.querySelector('#buttons');
 
 const rps = ['rock', 'paper', 'scissors'];
 
@@ -66,6 +67,10 @@ const playRound = function (getComputerChoice, playerSelection) {
     winner.textContent = 'You lost the match!!';
   } else if (playerScore === 5) {
     winner.textContent = 'You won the match!!';
+  }
+
+  if (computerScore === 5 || playerScore === 5) {
+    buttons.remove();
   }
 }
 
