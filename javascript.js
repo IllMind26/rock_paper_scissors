@@ -13,9 +13,12 @@ const rps = ['rock', 'paper', 'scissors'];
 
 let playerScore = 0;
 let computerScore = 0;
+
+// create variable to keep track of rounds
+
 let round = 1;
 
-// const playerSelection = document.querySelectorAll('.rps button');
+// create variables and event listeners for the player selections
 
 const btnRock = document.querySelector('.rock');
 const btnPaper = document.querySelector('.paper');
@@ -36,14 +39,7 @@ function getComputerChoice() {
   return randomSelect;
 }
 
-
-// const selections = playerSelection() && computerSelection();
-
-// buttons.forEach(button => {
-//   button.addEventListener('click', playRound)
-// })
-
-// const winner = playRound(playerSelection, computerSelection)
+// create main function to simulate rounds of rock, paper, scissors
 
 const playRound = function (getComputerChoice, playerSelection) {
   let win = {
@@ -69,31 +65,17 @@ const playRound = function (getComputerChoice, playerSelection) {
     winner.textContent = 'You won the match!!';
   }
 
+  // removes button div once the player or computer reach the match point, to prevent game from continuing
+
   if (computerScore === 5 || playerScore === 5) {
     buttons.remove();
   }
 }
 
-// const winner = playRound(playerSelection, computerSelection)
 
 
 
-// create a function for the player's selection
 
 
-// create function to keep score between player and computer
-
-// create a function to simulate a round and determine a winner
-
-
-// create a game function to loop rounds 5 times
-
-// function game() {
-//   for (i = 0; i <= 5; i++) {
-//     const playerSelection = getPlayerChoice();
-//     const computerSelection = getComputerChoice();
-//     playRound(playerSelection, computerSelection);
-//   }
-// }
 
 
