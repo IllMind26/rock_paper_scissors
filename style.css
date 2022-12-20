@@ -98,3 +98,8 @@
      margin: 15px;
      padding: 60px 0 0;
  }
+
+ #result,
+ #winner {
+     font-family: 'Anonymous Pro', monospace;
+ }
