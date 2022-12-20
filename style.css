@@ -37,7 +37,7 @@
      background-color: #89ccf7;
      height: 200px;
      text-align: center;
-     padding: 50px 0 0;
+     padding: 50px 0 50px;
      border: 3px solid black;
      left: 50%;
      transform: translateX(-50%);
@@ -54,6 +54,7 @@
      color: #EFEFF0;
      cursor: pointer;
      transition: 100ms;
+     padding: 20px;
  }
 
  .rock:hover,

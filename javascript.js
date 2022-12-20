@@ -68,7 +68,7 @@ const playRound = function (getComputerChoice, playerSelection) {
   // removes button div once the player or computer reach the match point, to prevent game from continuing
 
   if (computerScore === 5 || playerScore === 5) {
-    buttons.remove();
+    buttons.style.display = 'none';
   }
 }
 
