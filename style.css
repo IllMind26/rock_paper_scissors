@@ -14,7 +14,12 @@
      margin: 0;
  }
 
+ h1 {
+     font-family: 'Rubik Spray Paint', cursive;
+ }
+
  p {
+     font-family: 'Anonymous Pro', monospace;
      margin: 2px;
  }
 
