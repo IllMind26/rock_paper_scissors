@@ -65,10 +65,12 @@ const playRound = function (getComputerChoice, playerSelection) {
     winner.textContent = 'You won the match!!';
   }
 
-  // removes button div once the player or computer reach the match point, to prevent game from continuing
+  // disable button div once the player or computer reach the match point, to prevent game from continuing
 
-  if (computerScore === 5 || playerScore === 5) {
-    buttons.style.display = 'none';
+  if (computerScore >= 5 || playerScore >= 5) {
+    btnRock.disabled = 'true';
+    btnPaper.disabled = 'true';
+    btnScissors.disabled = 'true';
   }
 }
 
