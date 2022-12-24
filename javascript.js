@@ -1,5 +1,4 @@
 const rounds = document.querySelector('.rounds');
-const score = document.querySelector('.score');
 const result = document.querySelector('#result');
 const winner = document.querySelector('#winner');
 const player = document.querySelector('.player');
