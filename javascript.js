@@ -73,15 +73,3 @@ const playRound = function (getComputerChoice, playerSelection) {
     btnScissors.disabled = 'true';
   }
 }
-
-<<<<<<< HEAD
-
-
-
-
-
-
-
-=======
-game();
->>>>>>> 3273d6d5e7c970ff23471203e412641bfded9502
