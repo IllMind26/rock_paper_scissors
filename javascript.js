@@ -74,6 +74,7 @@ const playRound = function (getComputerChoice, playerSelection) {
   }
 }
 
+<<<<<<< HEAD
 
 
 
@@ -81,3 +82,6 @@ const playRound = function (getComputerChoice, playerSelection) {
 
 
 
+=======
+game();
+>>>>>>> 3273d6d5e7c970ff23471203e412641bfded9502
